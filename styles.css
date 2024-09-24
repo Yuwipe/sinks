@@ -1,35 +1,104 @@
-/* Outdated CSS */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    margin: 0;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 100vh;
 }
 
-ul {
-    margin: 0;
+header {
+    grid-column: 1 / span 3;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(-45deg, #996FD6, #9E7CD7, #B399DD, #C2B4E2, #D0C9EA);
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+nav {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-li {
-    margin: 0;
-    padding: 0;
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
 }
 
-p {
-    margin: 0;
-    padding: 0;
+main {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-img {
+.sink-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.sink-item img {
     width: 100%;
     height: auto;
+    grid-column: 1;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.sink-text {
+    grid-column: 2;
+}
+
+footer {
+    grid-column: 1 / span 3;
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .sink-item {
+        grid-template-columns: 1fr;
+    }
+
+    .sink-item img, .sink-text {
+        grid-column: 1;
+    }
 }
