@@ -26,15 +26,26 @@
     color: #fff;
 } 
 
-/* Header */
-header {
-    display: flex; 
-    flex-direction: column;
+/* Home */
+#home img {
+    display: flex; /* No need for flex on an img element */
+    width: 100%; /* Ensures image scales down */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    height: 50vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
-    font-size: 30px;
 }
 
 /* About-Grid Style */
