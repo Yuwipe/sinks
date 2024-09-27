@@ -51,7 +51,7 @@ body {
 }
 
 #home {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,13 +59,6 @@ body {
 }
 
 /* About-Grid Style */
-#about-container {
-    background-size: 400% 400%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .about-item {
     background-color: rgba(227,218,255, 0.7);
     overflow: hidden;
@@ -95,6 +88,10 @@ body {
     max-width: 100%;
     height: 500px;
     object-fit: cover;
+}
+
+.type-item img:hover {
+    transform: translateY(-10px);
 }
 
 .type-item-merge {
